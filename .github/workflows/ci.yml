@@ -61,7 +61,4 @@ jobs:
           docker logs democyber
           exit 1
 
-      # Publier l'image sur Docker Hub (seulement sur un push vers main)
-      - name: Push Docker image
-        if: github.event_name == 'push'
-        run: docker push $DOCKER_IMAGE_NAME
+      
